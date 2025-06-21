@@ -1,0 +1,132 @@
+/* 📦 Main Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem 4rem;
+}
+
+/* ✨ Latest Post */
+.latest-post {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 5rem;
+  border: 0.5px solid #888;
+  border-radius: 26px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.latest-image {
+  width: 100%;
+  max-height: 400px; /* Prevent overflow */
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.latest-image:hover {
+  transform: scale(1.01);
+}
+
+.latest-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.latest-description {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.latest-date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* 📚 Other Posts Grid */
+.other-posts-heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.other-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  border: 0.5px solid #888;
+  border-radius: 26px;
+  padding: 2rem;
+  padding-bottom: 6rem; /* Ensure scroll room */
+  margin-bottom: 3rem;
+}
+
+.other-posts-grid img {
+  width: 100%;
+  max-height: 200px; /* Prevent overflow */
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* 🔁 Responsive Tweaks */
+@media (max-width: 768px) {
+  .container {
+    padding: 4rem 1rem 6rem; /* Increased bottom padding for scroll */
+  }
+
+  .latest-post {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .latest-image {
+    border-radius: 10px;
+    max-height: 300px; /* Smaller for mobile */
+  }
+
+  .latest-image:hover {
+    transform: none; /* Disable hover on mobile */
+  }
+
+  .latest-title {
+    font-size: 1.6rem;
+  }
+
+  .latest-description {
+    font-size: 1rem;
+  }
+
+  .latest-date {
+    font-size: 0.8rem;
+  }
+
+  .other-posts-heading {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .other-posts-grid {
+    gap: 1rem;
+    padding: 2rem;
+    padding-bottom: 6rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .other-posts-grid {
+    grid-template-columns: 1fr; /* Stack posts */
+  }
+
+  .latest-title {
+    font-size: 1.4rem;
+  }
+
+  .latest-description {
+    font-size: 0.95rem;
+  }
+}
