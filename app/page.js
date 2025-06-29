@@ -1,4 +1,4 @@
-this is page.js under app import blogData from '@/data/blogData';
+ import blogData from '@/data/blogData';
 import Header from '@/components/Header';
 import BlogCard from '@/components/BlogCard';
 import styles from './page.module.css'; // ✅ Proper module import
