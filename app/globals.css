@@ -1,8 +1,9 @@
+/* CSS Variables aligned with New Heights aesthetic */
 :root {
-  --text-color: #eaeaea;
-  --bg-color: #0c0c0c;
-  --accent: #00bfff;
-  --font: 'Inter', sans-serif;
+  --bg-color: #fff8e1; /* Cream background */
+  --text-color: #1a2a44; /* Dark blue text */
+  --accent: #f4c430; /* Soft gold accent */
+  --font: 'Montserrat', sans-serif;
   --max-width: 1200px;
 }
 
@@ -21,10 +22,19 @@ html, body {
   scroll-behavior: smooth;
   background-color: var(--bg-color);
   color: var(--text-color);
-  -webkit-overflow-scrolling: touch; /* Improve iOS scrolling */
+  -webkit-overflow-scrolling: touch;
 }
 
-/* ✨ Page load animation */
+/* Global container for consistent layouts */
+.container {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Page load animation (kept from original) */
 body {
   animation: fadeIn 0.4s ease-in-out;
 }
@@ -40,16 +50,37 @@ body {
   }
 }
 
-/* 🎯 Scrollbar Styling */
+/* Scrollbar styling (subtle, aligned with New Heights) */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #444;
-  border-radius: 10px;
+  background-color: #1a2a44; /* Dark blue */
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-track {
   background-color: transparent;
+}
+
+/* Global image styles as fallback for non-Next.js images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive adjustments */
+@media screen and (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
